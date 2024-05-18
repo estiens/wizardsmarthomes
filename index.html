@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="vaporwave">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Home Consulting</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.15.0/dist/full.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Nunito', sans-serif;
+    }
+
+    .cursor-pointer {
+      cursor: pointer;
+    }
+
+    .transition-hover {
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+
+    .hover-opacity {
+      opacity: 0.8;
+    }
+  </style>
+  <script>
+    function showSection(sectionId) {
+      const sections = ['beginners', 'intermediate', 'advanced'];
+      sections.forEach(id => {
+        const details = document.getElementById(`${id}-details`);
+        const element = document.getElementById(id);
+        if (id === sectionId) {
+          details.classList.toggle('hidden');
+          element.classList.toggle('bg-base-100');
+          element.classList.toggle('bg-primary', id === 'beginners');
+          element.classList.toggle('bg-secondary', id === 'intermediate');
+          element.classList.toggle('bg-accent', id === 'advanced');
+          element.classList.toggle('text-primary-content', id !== 'beginners');
+          element.classList.toggle('text-secondary-content', id !== 'intermediate');
+          element.classList.toggle('text-accent-content', id !== 'advanced');
+        } else {
+          details.classList.add('hidden');
+          element.classList.remove('bg-base-100');
+          if (id === 'beginners') {
+            element.classList.add('bg-primary');
+            element.classList.remove('text-primary-content');
+          } else if (id === 'intermediate') {
+            element.classList.add('bg-secondary');
+            element.classList.remove('text-secondary-content');
+          } else if (id === 'advanced') {
+            element.classList.add('bg-accent');
+            element.classList.remove('text-accent-content');
+          }
+        }
+      });
+      document.getElementById('skillLevel').value = sectionId;
+    }
+  </script>
+</head>
+
+<body class="bg-base-200 text-content">
+
+  <!-- Header -->
+  <header class="bg-primary text-primary-content py-6">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-3xl font-bold">Smart Home Consulting</h1>
+      <nav class="space-x-4">
+        <a href="#services" class="hover:underline">Services</a>
+        <a href="#availability" class="hover:underline">Availability</a>
+        <a href="#about" class="hover:underline">About Me</a>
+        <a href="#why-home-assistant" class="hover:underline">Why Home Assistant?</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Hero Section -->
+  <div class="hero min-h-screen bg-base-200">
+    <div class="hero-content flex-col lg:flex-row">
+      <div class="md:w-1/2 mb-8 md:mb-0">
+        <h2 class="text-4xl font-bold mb-4">Make Your Home Smarter</h2>
+        <p class="text-lg mb-6">Expert smart home consulting to help you plan, set up, and optimize your Home
+          Assistant-based smart home. Whether you're just starting out or need advanced troubleshooting, I've got you
+          covered.</p>
+      </div>
+      <div class="md:w-1/3">
+        <img src="images/whimsy2.png" alt="Smart Home Image" class="w-full rounded-lg shadow-lg">
+      </div>
+    </div>
+  </div>
+
+  <section id="skills" class="container mx-auto py-8">
+    <h3 class="text-3xl font-bold mb-4 text-center">Skill Levels</h3>
+    <div class="flex justify-center mb-8">
+      <div id="beginners"
+        class="card transition-hover bg-primary text-primary-content shadow-lg cursor-pointer w-full md:w-1/3 p-4 m-2"
+        onclick="showSection('beginners')">
+        <div class="card-body">
+          <h4 class="text-2xl font-bold mb-2">Beginners</h4>
+          <p class="mb-4">Introduction to smart homes with simple, jargon-free guidance. Basic setup and installation.
+          </p>
+          <div id="beginners-details" class="hidden">
+            <ul class="list-disc ml-6">
+              <li>Understanding smart home basics</li>
+              <li>Choosing the right devices</li>
+              <li>Simple and easy setup</li>
+              <li>Basic troubleshooting</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="intermediate"
+        class="card bg-secondary text-secondary-content shadow-lg cursor-pointer w-full md:w-1/3 p-4 m-2"
+        onclick="showSection('intermediate')">
+        <div class="card-body">
+          <h4 class="text-2xl font-bold mb-2">Intermediate Users</h4>
+          <p class="mb-4">Help with specific issues, configuration and optimization, product recommendations.</p>
+          <div id="intermediate-details" class="hidden">
+            <ul class="list-disc ml-6">
+              <li>Advanced device setup</li>
+              <li>Custom configurations</li>
+              <li>Optimizing performance</li>
+              <li>Integration with other systems</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="advanced" class="card bg-accent text-accent-content shadow-lg cursor-pointer w-full md:w-1/3 p-4 m-2"
+        onclick="showSection('advanced')">
+        <div class="card-body">
+          <h4 class="text-2xl font-bold mb-2">Advanced Users</h4>
+          <p class="mb-4">Advanced troubleshooting, custom setups and integrations, performance optimization.</p>
+          <div id="advanced-details" class="hidden">
+            <ul class="list-disc ml-6">
+              <li>Complex configurations</li>
+              <li>High-level troubleshooting</li>
+              <li>Advanced automation</li>
+              <li>Data privacy and security</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <input type="hidden" id="skillLevel" name="skillLevel" value="beginners">
+  </section>
+
+
+
+  <!-- Service Types -->
+  <section id="services" class="bg-base-100 py-8">
+    <div class="container mx-auto p-8">
+      <h3 class="text-3xl font-bold mb-4 text-center">Service Types</h3>
+      <div class="flex flex-wrap -mx-4 justify-center">
+
+        <!-- Consulting -->
+        <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+          <div class="card bg-primary text-primary-content shadow-lg">
+            <div class="card-body">
+              <h4 class="text-2xl font-bold mb-2">Consulting</h4>
+              <ul class="list-disc ml-6">
+                <li>Planning Your System: Custom smart home setup design.</li>
+                <li>Pros and Cons Discussion: Evaluate technologies and platforms.</li>
+                <li>Needs Assessment: Determine essential devices and systems.</li>
+                <li>Purchase Recommendations: Expert advice on where to buy products.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Setup -->
+        <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+          <div class="card bg-secondary text-secondary-content shadow-lg">
+            <div class="card-body">
+              <h4 class="text-2xl font-bold mb-2">Setup</h4>
+              <ul class="list-disc ml-6">
+                <li>Professional Installation: Seamless device setup.</li>
+                <li>Home Assistant Setup: Server installation or custom-built Raspberry Pi.</li>
+                <li>Configuration and Integration: Optimize and connect devices.</li>
+                <li>Training and Support: Get the most out of your smart home.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fixing -->
+        <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+          <div class="card bg-accent text-accent-content shadow-lg">
+            <div class="card-body">
+              <h4 class="text-2xl font-bold mb-2">Fixing</h4>
+              <ul class="list-disc ml-6">
+                <li>Debugging: Identify and solve issues.</li>
+                <li>Troubleshooting: Fix broken automations and integrations.</li>
+                <li>Maintenance: Keep your smart home running smoothly.</li>
+                <li>On-Call Support: Immediate assistance when you need it.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Availability Section -->
+  <section id="availability" class="bg-base-300 py-8">
+    <div class="container mx-auto p-8">
+      <h3 class="text-3xl font-bold mb-4 text-center">Availability</h3>
+      <div class="text-lg text-center mb-4">
+        <p>I am available for in-home consultation or service work in the Twin Cities area.</p>
+        <p>The vast majority of my clients I work with online:</p>
+      </div>
+      <div class="flex flex-wrap justify-center">
+        <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+          <div class="card bg-primary text-primary-content shadow-lg">
+            <div class="card-body">
+              <h4 class="text-2xl font-bold mb-2">Online Services</h4>
+              <ul class="list-disc ml-6">
+                <li>Initial discussions to understand your needs.</li>
+                <li>Providing detailed instructions for setups and fixes.</li>
+                <li>Remote troubleshooting and configuration assistance.</li>
+                <li>Wizarding into your system to figure out what's going wrong.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+          <div class="card bg-primary text-primary-content shadow-lg">
+            <div class="card-body">
+              <h4 class="text-2xl font-bold mb-2">Local & In-Person</h4>
+              <ul class="list-disc ml-6">
+                <li>Installation/Delivery</li>
+                <li>On-site debugging</li>
+                <li>Moral support</li>
+                <li>Comes with free ice cream</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="bg-base-100 py-8">
+    <div class="container mx-auto p-8">
+      <h3 class="text-3xl font-bold mb-4 text-center">About Me</h3>
+      <div class="flex">
+        <div class="text-lg mb-4">
+          <br><br><br>
+          <p>Hi there! I'm Eric, and I live in Minneapolis with my wonderful wife, our small cat, and an even
+            smaller dog.</p>
+          <br>
+          <p>I've been using Home Assistant since day one to make life easier, save money, and even create art.</p>
+          <br>
+          <p>In a past life, I was a social worker, but for the last 10+ years, I've been a professional programmer.
+            Don't
+            worry, I still speak regular English!</p>
+          <br>
+          <p>I have my own code in multiple Home Assistant libraries, and for a while, you could control everything in
+            our
+            house through a chatbot. Yes, even the cat's meows (just kidding...no cyborg cats here yet...).</p>
+        </div>
+        <img class="w-1/2" src="images/eric.jpeg">
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Home Assistant Section -->
+  <section id="why-home-assistant" class="bg-base-300 py-8">
+    <div class="container mx-auto p-8">
+      <h3 class="text-3xl font-bold mb-4 text-center">Why Home Assistant?</h3>
+      <div class="text-lg text-center mb-4">
+        <p>Home Assistant is the ultimate smart home platform for privacy-conscious individuals. With thousands of
+          contributors worldwide, it's open-source and constantly evolving. It offers freedom from being locked into a
+          single vendor, allowing for a vast array of integrations and often enabling you to find the products you need
+          at a much lower price. Whether you're looking to automate your lighting, manage security, or control your
+          media, Home Assistant has you covered. Discover more at <a href="https://www.home-assistant.io/"
+            class="text-secondary underline">Home Assistant</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section id="contact" class="bg-base-100 py-8">
+    <div class="container mx-auto p-8">
+      <h3 class="text-3xl font-bold mb-4 text-center">Get in Touch</h3>
+      <form action="https://formsubmit.co/wizardformsubmission@ericstiens.dev" method="POST"
+        class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+        <div class="mb-4">
+          <label for="name" class="block text-lg font-medium mb-2">Name</label>
+          <input type="text" id="name" name="name" class="input input-bordered w-full" required>
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-lg font-medium mb-2">Email</label>
+          <input type="email" id="email" name="email" class="input input-bordered w-full" required>
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block text-lg font-medium mb-2">Message</label>
+          <textarea id="message" name="message" class="textarea textarea-bordered w-full" rows="5" required></textarea>
+        </div>
+        <input type="hidden" id="selectedSkillLevel" name="selectedSkillLevel" value="beginners">
+        <button type="submit" class="btn btn-primary w-full">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-primary-content py-4 text-center">
+    <p>&copy; 2024 Wizard Smart Homes. All rights reserved.</p>
+    <p><a href="mailto:wizardsmarthomes@ericstiens.dev" class="text-secondary underline">Contact Us</a></p>
+  </footer>
+
+</body>
+
+</html>
