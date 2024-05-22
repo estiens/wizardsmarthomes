@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smart Home Consulting</title>
+  <title>Wizard Smart Homes - Smart Home Consulting</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/daisyui@2.15.0/dist/full.css" rel="stylesheet">
   <style>
@@ -65,7 +65,8 @@
   <!-- Header -->
   <header class="bg-primary text-primary-content py-6">
     <div class="container mx-auto flex justify-between items-center">
-      <h1 class="text-3xl font-bold">Smart Home Consulting</h1>
+      <h1 class="text-3xl font-bold">Wizard Smart Homes</h1>
+      <h2 class="text-xl font-bold">smart home consultation that won't make you feel dumb</h2>
       <nav class="space-x-4">
         <a href="#services" class="hover:underline">Services</a>
         <a href="#availability" class="hover:underline">Availability</a>
@@ -75,20 +76,40 @@
     </div>
   </header>
 
-  <!-- Main Hero Section -->
-  <div class="hero min-h-screen bg-base-200">
-    <div class="hero-content flex-col lg:flex-row">
-      <div class="md:w-1/2 mb-8 md:mb-0">
-        <h2 class="text-4xl font-bold mb-4">Make Your Home Smarter</h2>
-        <p class="text-lg mb-6">Expert smart home consulting to help you plan, set up, and optimize your Home
-          Assistant-based smart home. Whether you're just starting out or need advanced troubleshooting, I've got you
-          covered.</p>
-      </div>
-      <div class="md:w-1/3">
-        <img src="images/whimsy2.png" alt="Smart Home Image" class="w-full rounded-lg shadow-lg">
-      </div>
+  <div
+    class="absolute left-[calc(50%-4rem)] top-10 -z-10 transform-gpu blur-3xl sm:left-[calc(50%-18rem)] lg:left-48 lg:top-[calc(50%-30rem)] xl:left-[calc(50%-24rem)]"
+    aria-hidden="true">
+    <div class="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-20"
+      style="clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)">
     </div>
   </div>
+  <div class="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
+    <div class="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
+      <h1 class="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">Because smart things should make your
+        life easier, not harder.
+      </h1>
+      < class="mt-6 text-lg leading-8 text-gray-300">Expert smart home consulting to help you plan, set up, and
+        optimize your smart home. Specializing in <a href="https://www.home-assistant.io/">Home Assistant</a>, but can
+        figure out what you need, with what you have.
+        <br /><br />Whether you're just starting out or need advanced troubleshooting, I've got you
+        covered.</p>
+    </div>
+    <div class="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
+      <img src="images/whimsy2.png" alt="Smart Home Image" height=50px class="w-1/2 rounded-lg shadow-lg">
+    </div>
+  </div>
+  <section class="bg-white dark:bg-gray-900">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+      <div class="mx-auto max-w-screen-sm text-center">
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold leading-tight text-gray-900 dark:text-white">Summer
+          special: Book a
+          free consultation today!</h2>
+        <a href="mailto:wizardsmarthomes@ericstiens.dev"
+          class="inline-block px-6 py-3 mt-6 text-lg font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700">Ask
+          the wizard...</a>
+      </div>
+    </div>
+  </section>
 
   <section id="skills" class="container mx-auto py-8">
     <h3 class="text-3xl font-bold mb-4 text-center">Skill Levels</h3>
@@ -145,73 +166,161 @@
     <input type="hidden" id="skillLevel" name="skillLevel" value="beginners">
   </section>
 
-
-
-  <!-- Service Types -->
-  <section id="services" class="bg-base-100 py-8">
-    <div class="container mx-auto p-8">
-      <h3 class="text-3xl font-bold mb-4 text-center">Service Types</h3>
-      <div class="flex flex-wrap -mx-4 justify-center">
-
-        <!-- Consulting -->
-        <div class="w-full md:w-1/2 lg:w-1/3 p-4">
-          <div class="card bg-primary text-primary-content shadow-lg">
-            <div class="card-body">
-              <h4 class="text-2xl font-bold mb-2">Consulting</h4>
-              <ul class="list-disc ml-6">
-                <li>Planning Your System: Custom smart home setup design.</li>
-                <li>Pros and Cons Discussion: Evaluate technologies and platforms.</li>
-                <li>Needs Assessment: Determine essential devices and systems.</li>
-                <li>Purchase Recommendations: Expert advice on where to buy products.</li>
-              </ul>
+  <div id="services" class="section relative pt-20 pb-8 md:pt-16 md:pb-0 bg-accent">
+    <div class="container xl:max-w-6xl mx-auto px-4">
+      <!-- Heading start -->
+      <header class="text-center mx-auto mb-12 lg:px-20">
+        <h2 class="text-2xl leading-normal mb-2 font-bold text-black">What I Do</h2>
+        <p class="text-xl text-black mx-auto pb-2">Expert smart home consulting services
+          tailored to your needs.</p>
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          viewBox="0 0 100 60" style="margin: 0 auto;height: 35px;" xml:space="preserve">
+          <circle cx="50.1" cy="30.4" r="5" class="stroke-primary"
+            style="fill: transparent;stroke-width: 2;stroke-miterlimit: 10;"></circle>
+          <line x1="55.1" y1="30.4" x2="100" y2="30.4" class="stroke-primary"
+            style="stroke-width: 2;stroke-miterlimit: 10;"></line>
+          <line x1="45.1" y1="30.4" x2="0" y2="30.4" class="stroke-primary"
+            style="stroke-width: 2;stroke-miterlimit: 10;"></line>
+        </svg>
+      </header>
+      <!-- End heading -->
+      <!-- row -->
+      <div class="flex flex-wrap flex-row -mx-4 text-center">
+        <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s"
+          style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
+          <!-- service block -->
+          <div
+            class="py-8 px-12 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
+            <div class="inline-block text-gray-900 mb-4">
+              <!-- icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="bi bi-house"
+                viewBox="0 0 16 16">
+                <path
+                  d="M8 3.293l-6 6V14a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-4h2v4a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-4.707l-6-6zm5 7.414V13h-3v-4H6v4H3v-2.293l5-5 5 5zM13.5 1a.5.5 0 0 1 .5.5v1.793l-.5-.5V1zM7.354.646a.5.5 0 0 1 .292.12l-1.08 1.08a.5.5 0 0 1-.708 0l-6-6A.5.5 0 0 1 1 1v-.5h1.293L8 5.207l6.293-6.293a.5.5 0 0 1 .707.707l-6.293 6.293-6.293-6.293a.5.5 0 0 1 0-.707z" />
+              </svg>
             </div>
+            <h3 class="text-lg leading-normal mb-2 font-semibold text-black">Custom Setup</h3>
+            <p class="text-gray-500">Personalized smart home setup design tailored to your needs.</p>
           </div>
+          <!-- end service block -->
         </div>
 
-        <!-- Setup -->
-        <div class="w-full md:w-1/2 lg:w-1/3 p-4">
-          <div class="card bg-secondary text-secondary-content shadow-lg">
-            <div class="card-body">
-              <h4 class="text-2xl font-bold mb-2">Setup</h4>
-              <ul class="list-disc ml-6">
-                <li>Professional Installation: Seamless device setup.</li>
-                <li>Home Assistant Setup: Server installation or custom-built Raspberry Pi.</li>
-                <li>Configuration and Integration: Optimize and connect devices.</li>
-                <li>Training and Support: Get the most out of your smart home.</li>
-              </ul>
+        <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s"
+          data-wow-delay=".1s"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInUp;">
+          <!-- service block -->
+          <div
+            class="py-8 px-12 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
+            <div class="inline-block text-gray-900 mb-4">
+              <!-- icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="bi bi-cpu"
+                viewBox="0 0 16 16">
+                <path
+                  d="M5 0a.5.5 0 0 1 .5.5V1h5V.5a.5.5 0 0 1 1 0V1h.5A1.5 1.5 0 0 1 13 2.5v.5h.5a.5.5 0 0 1 0 1H13v5h.5a.5.5 0 0 1 0 1H13v.5A1.5 1.5 0 0 1 11.5 12H11v.5a.5.5 0 0 1-1 0V12H5v.5a.5.5 0 0 1-1 0V12H3.5A1.5 1.5 0 0 1 2 10.5V10h-.5a.5.5 0 0 1 0-1H2V4h-.5a.5.5 0 0 1 0-1H2v-.5A1.5 1.5 0 0 1 3.5 1H4V.5a.5.5 0 0 1 1 0V1h.5a.5.5 0 0 1 .5.5V2h5V1.5a.5.5 0 0 1 1 0V2h.5A1.5 1.5 0 0 1 14 3.5V4h.5a.5.5 0 0 1 0 1H14v5h.5a.5.5 0 0 1 0 1H14v.5A1.5 1.5 0 0 1 12.5 13H12v.5a.5.5 0 0 1-1 0V13H5v.5a.5.5 0 0 1-1 0V13H3.5A1.5 1.5 0 0 1 2 11.5V11h-.5a.5.5 0 0 1-1 0H0v-.5a1.5 1.5 0 0 1 1.5-1.5h.5V9H1a.5.5 0 0 1 0-1h.5V3.5A1.5 1.5 0 0 1 3 2H4v-.5A1.5 1.5 0 0 1 5.5 0H6V.5A.5.5 0 0 1 6 1H5v-.5A.5.5 0 0 1 5 0z" />
+              </svg>
             </div>
+            <h3 class="text-lg leading-normal mb-2 font-semibold text-black">Device Integration</h3>
+            <p class="text-gray-500">Seamless integration of all your smart devices into one cohesive system.</p>
           </div>
+          <!-- end service block -->
         </div>
 
-        <!-- Fixing -->
-        <div class="w-full md:w-1/2 lg:w-1/3 p-4">
-          <div class="card bg-accent text-accent-content shadow-lg">
-            <div class="card-body">
-              <h4 class="text-2xl font-bold mb-2">Fixing</h4>
-              <ul class="list-disc ml-6">
-                <li>Debugging: Identify and solve issues.</li>
-                <li>Troubleshooting: Fix broken automations and integrations.</li>
-                <li>Maintenance: Keep your smart home running smoothly.</li>
-                <li>On-Call Support: Immediate assistance when you need it.</li>
-              </ul>
+        <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s"
+          data-wow-delay=".3s"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp;">
+          <!-- service block -->
+          <div
+            class="py-8 px-12 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
+            <div class="inline-block text-gray-900 mb-4">
+              <!-- icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor"
+                class="bi bi-shield-check" viewBox="0 0 16 16">
+                <path
+                  d="M5.5 6.5a.5.5 0 0 1 .854-.354l2 2a.5.5 0 0 1-.707.707L6 7.707 5.354 8.354a.5.5 0 1 1-.707-.707l1-1z" />
+                <path
+                  d="M3.5 0h9a1.5 1.5 0 0 1 1.5 1.5v6a6.5 6.5 0 1 1-13 0v-6A1.5 1.5 0 0 1 3.5 0zM4 1v6a5.5 5.5 0 0 0 11 0V1h-11z" />
+              </svg>
             </div>
+            <h3 class="text-lg leading-normal mb-2 font-semibold text-black">Security & Privacy</h3>
+            <p class="text-gray-500">Ensure the highest level of security and privacy for your smart home setup.</p>
           </div>
+          <!-- end service block -->
         </div>
 
+        <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s"
+          style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
+          <!-- service block -->
+          <div
+            class="py-8 px-12 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
+            <div class="inline-block text-gray-900 mb-4">
+              <!-- icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="bi bi-tools"
+                viewBox="0 0 16 16">
+                <path
+                  d="M1 0a1 1 0 0 0-.8 1.6l1.2 1.6a1 1 0 0 0 1.6-1.2l-1.2-1.6A1 1 0 0 0 1 0zm11.854 1.646a.5.5 0 0 0-.708.708l3.855 3.854-4.095 4.096-.354-.354L10.5 7.7l-.794.794L12.04 11l-.354.354L7.5 7.165l.354-.354-4.096 4.096-1.268-1.268a3 3 0 0 0-.757-.507l-.993-.397-.646-.26-.646-.646L2 8.293l-.646-.646.646-.646.646-.646.396-.992a3 3 0 0 0 .507-.757l1.268-1.268 4.096-4.096.354.354L6.207 1.5l.354-.354-.354-.354 3.854 3.854a.5.5 0 0 0 .708-.708l-3.854-3.854a.5.5 0 0 0-.708.708L9.707.707 8.646 1.768l-.354-.354L5.768.646 4.707 1.707 2.293.354a1.5 1.5 0 1 1 .708.708l1.146 1.146L.707 4.707 0 4a2.5 2.5 0 1 1 0 2.5L2.354 7.5 1.293 8.5 1.5 10a2.5 2.5 0 1 1 2.5 0l1.354 1.354.646.646.354-.354-.354-.354.354-.354L8.5 10.5l.354.354 4.096-4.096 1.268-1.268 4.095-4.095a.5.5 0 0 0-.708-.708L12.5 1.5z" />
+              </svg>
+            </div>
+            <h3 class="text-lg leading-normal mb-2 font-semibold text-black">Professional Installation</h3>
+            <p class="text-gray-500">Expert installation of all smart home devices for optimal performance.</p>
+          </div>
+          <!-- end service block -->
+        </div>
+
+        <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s"
+          data-wow-delay=".1s"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInUp;">
+          <!-- service block -->
+          <div
+            class="py-8 px-12 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
+            <div class="inline-block text-gray-900 mb-4">
+              <!-- icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="bi bi-tools"
+                viewBox="0 0 16 16">
+                <path
+                  d="M1 0a1 1 0 0 0-.8 1.6l1.2 1.6a1 1 0 0 0 1.6-1.2l-1.2-1.6A1 1 0 0 0 1 0zm11.854 1.646a.5.5 0 0 0-.708.708l3.855 3.854-4.095 4.096-.354-.354L10.5 7.7l-.794.794L12.04 11l-.354.354L7.5 7.165l.354-.354-4.096 4.096-1.268-1.268a3 3 0 0 0-.757-.507l-.993-.397-.646-.26-.646-.646L2 8.293l-.646-.646.646-.646.646-.646.396-.992a3 3 0 0 0 .507-.757l1.268-1.268 4.096-4.096.354.354L6.207 1.5l.354-.354-.354-.354 3.854 3.854a.5.5 0 0 0 .708-.708l-3.854-3.854a.5.5 0 0 0-.708.708L9.707.707 8.646 1.768l-.354-.354L5.768.646 4.707 1.707 2.293.354a1.5 1.5 0 1 1 .708.708l1.146 1.146L.707 4.707 0 4a2.5 2.5 0 1 1 0 2.5L2.354 7.5 1.293 8.5 1.5 10a2.5 2.5 0 1 1 2.5 0l1.354 1.354.646.646.354-.354-.354-.354.354-.354L8.5 10.5l.354.354 4.096-4.096 1.268-1.268 4.095-4.095a.5.5 0 0 0-.708-.708L12.5 1.5z" />
+              </svg>
+            </div>
+            <h3 class="text-lg leading-normal mb-2 font-semibold text-black">Training & Support</h3>
+            <p class="text-gray-500">Ongoing training and support to help you get the most out of your smart home.</p>
+          </div>
+          <!-- end service block -->
+        </div>
+
+        <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s"
+          data-wow-delay=".3s"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp;">
+          <!-- service block -->
+          <div
+            class="py-8 px-12 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
+            <div class="inline-block text-gray-900 mb-4">
+              <!-- icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor"
+                class="bi bi-wrench" viewBox="0 0 16 16">
+                <path
+                  d="M.102 2.223A1 1 0 0 1 1.515.809l1.75 1.75a5.52 5.52 0 0 1 1.49-.97l-1.015-.57A1 1 0 1 1 5.222.102l5.656 5.657-1.41 1.409-5.657-5.656a1 1 0 0 1 0-1.415l1.014 1.014a5.498 5.498 0 0 1 .569 1.014 5.482 5.482 0 0 1-.97 1.491l1.75 1.75A1 1 0 1 1 9.89 1.807l-1.75-1.75a5.483 5.483 0 0 1 1.015-.569 5.497 5.497 0 0 1 1.49-.97L9.89 1.222a1 1 0 1 1 1.414-1.414l1.75 1.75a5.498 5.498 0 0 1-.569 1.015 5.483 5.483 0 0 1-1.49.97l1.75 1.75A1 1 0 1 1 9.89 9.89l-1.75-1.75a5.498 5.498 0 0 1-1.015.569 5.483 5.483 0 0 1-1.49.97l1.75 1.75a1 1 0 1 1-1.414 1.414l-1.75-1.75a5.498 5.498 0 0 1-.569 1.015 5.483 5.483 0 0 1-1.49.97l1.75 1.75a1 1 0 0 1-1.415 1.414l-1.75-1.75a5.498 5.498 0 0 1-.97-1.49l-.57 1.015a1 1 0 0 1-1.414-1.414l1.75-1.75a5.497 5.497 0 0 1-1.014-.569 5.482 5.482 0 0 1-.97-1.49l-1.75 1.75a1 1 0 0 1-1.414-1.414l1.75-1.75a5.498 5.498 0 0 1-.569-1.015 5.482 5.482 0 0 1-.97-1.49l-1.75 1.75a1 1 0 1 1-1.414-1.414l1.75-1.75a5.498 5.498 0 0 1-.569-1.015A5.482 5.482 0 0 1 .102 2.223z" />
+              </svg>
+            </div>
+            <h3 class="text-lg leading-normal mb-2 font-semibold text-black">Troubleshooting</h3>
+            <p class="text-gray-500">Identify and resolve issues to keep your smart home running smoothly.</p>
+          </div>
+          <!-- end service block -->
+        </div>
       </div>
+      <!-- end row -->
     </div>
-  </section>
+  </div>
 
   <!-- Availability Section -->
   <section id="availability" class="bg-base-300 py-8">
     <div class="container mx-auto p-8">
       <h3 class="text-3xl font-bold mb-4 text-center">Availability</h3>
       <div class="text-lg text-center mb-4">
-        <p>I am available for in-home consultation or service work in the Twin Cities area.</p>
-        <p>The vast majority of my clients I work with online:</p>
+        <p>I am available for in-home consultation or service work in the Twin Cities area and I do a lot of remote
+          consulting and troubleshooting as well!</p>
+        <p>If you are skeptical if we can meet your needs from across time and space...try us out!</p>
       </div>
       <div class="flex flex-wrap justify-center">
-        <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+        <div class="w-1/3">
           <div class="card bg-primary text-primary-content shadow-lg">
             <div class="card-body">
               <h4 class="text-2xl font-bold mb-2">Online Services</h4>
@@ -224,7 +333,8 @@
             </div>
           </div>
         </div>
-        <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+        <div class="w-1/3"></div>
+        <div class="w-1/3">
           <div class="card bg-primary text-primary-content shadow-lg">
             <div class="card-body">
               <h4 class="text-2xl font-bold mb-2">Local & In-Person</h4>
@@ -282,35 +392,91 @@
   </section>
 
   <!-- Contact Form Section -->
-  <section id="contact" class="bg-base-100 py-8">
+  <section id="contact" class="bg-accent py-8">
     <div class="container mx-auto p-8">
-      <h3 class="text-3xl font-bold mb-4 text-center">Get in Touch</h3>
+      <h3 class="text-3xl font-bold mb-4 text-center text-white">Get in Touch</h3>
       <form action="https://formsubmit.co/wizardformsubmission@ericstiens.dev" method="POST"
         class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg">
         <div class="mb-4">
-          <label for="name" class="block text-lg font-medium mb-2">Name</label>
-          <input type="text" id="name" name="name" class="input input-bordered w-full" required>
+          <label for="name" class="block text-lg font-medium mb-2 text-gray-800">Name</label>
+          <input type="text" id="name" name="name" class="input input-bordered w-full" placeholder="Your Name" required>
         </div>
         <div class="mb-4">
-          <label for="email" class="block text-lg font-medium mb-2">Email</label>
-          <input type="email" id="email" name="email" class="input input-bordered w-full" required>
+          <label for="email" class="block text-lg font-medium mb-2 text-gray-800">Email</label>
+          <input type="email" id="email" name="email" class="input input-bordered w-full" placeholder="Your Email"
+            required>
         </div>
         <div class="mb-4">
-          <label for="message" class="block text-lg font-medium mb-2">Message</label>
-          <textarea id="message" name="message" class="textarea textarea-bordered w-full" rows="5" required></textarea>
+          <label for="phone" class="block text-lg font-medium mb-2 text-gray-800">Phone Number</label>
+          <input type="tel" id="phone" name="phone" class="input input-bordered w-full" placeholder="Your Phone Number"
+            required>
+        </div>
+        <div class="mb-4">
+          <label for="service-type" class="block text-lg font-medium mb-2 text-gray-800">Service Type</label>
+          <select id="service-type" name="service-type" class="select select-bordered w-full" required>
+            <option disabled selected>Select the service you need</option>
+            <option value="consulting">Consulting</option>
+            <option value="setup">Setup</option>
+            <option value="fixing">Fixing</option>
+            <option value="training-support">Training & Support</option>
+          </select>
+        </div>
+        <div class="mb-4">
+          <label for="how-did-you-find-us" class="block text-lg font-medium mb-2 text-gray-800">How Did You Find
+            Us?</label>
+          <select id="how-did-you-find-us" name="how-did-you-find-us" class="select select-bordered w-full" required>
+            <option disabled selected>Select an option</option>
+            <option value="search-engine">Search Engine</option>
+            <option value="social-media">Social Media</option>
+            <option value="friend">Friend/Referral</option>
+            <option value="advertisement">Advertisement</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block text-lg font-medium mb-2 text-gray-800">Message</label>
+          <textarea id="message" name="message" class="textarea textarea-bordered w-full" rows="5"
+            placeholder="Tell us about your project or issue..." required></textarea>
         </div>
         <input type="hidden" id="selectedSkillLevel" name="selectedSkillLevel" value="beginners">
-        <button type="submit" class="btn btn-primary w-full">Submit</button>
+        <button type="submit" class="btn btn-primary w-full bg-purple-600 hover:bg-purple-700 text-white">Get
+          Started</button>
       </form>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-primary text-primary-content py-4 text-center">
-    <p>&copy; 2024 Wizard Smart Homes. All rights reserved.</p>
-    <p><a href="mailto:wizardsmarthomes@ericstiens.dev" class="text-secondary underline">Contact Us</a></p>
-  </footer>
 
+  <div class="relative overflow-hidden bg-white">
+    <!-- Decorative background image and gradient -->
+    <div aria-hidden="true" class="absolute inset-0">
+      <div class="absolute inset-0 mx-auto max-w-7xl overflow-hidden xl:px-8">
+        <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-sale-full-width.jpg" alt=""
+          class="h-full w-full object-cover object-center">
+      </div>
+      <div class="absolute inset-0 bg-white bg-opacity-75"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-white via-white"></div>
+    </div>
+
+    <!-- Callout -->
+    <section aria-labelledby="sale-heading"
+      class="relative mx-auto flex max-w-7xl flex-col items-center px-4 pt-32 text-center sm:px-6 lg:px-8">
+      <h2 id="sale-heading" class="font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">Summer
+        Sale: Get Started On The Right Foot!</h2>
+      <p class="my-3 text-2xl text-gray-600">You get a magical little computer pre-loaded with home
+        assistant, and a free two hour consultation to get it set up in your home, on your network, with your own app,
+        and with many of your devices auto-discovered</p>
+      <p class="my-3 text-xl text-gray-600">Offer limited to the first <strike>20</strike> 17 takers!
+      </p>
+    </section>
+  </div>
+  <!-- Footer -->
+  <div class="container flex mx-auto my-5">
+    <p class="text-xl w-1/3">Wizard Smart Homes</p>
+    <a href="mailto:wizardsmarthomes@ericstiens.dev"
+      class="w-1/3 text-xl font-bold text-accent hover:text-primary-content">Email us at
+      wizardsmarthomes@ericstiens.dev</a>
+    <p class="text-xl">Helping your house become a little more magical.</p>
+  </div>
 </body>
 
 </html>
